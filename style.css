@@ -245,6 +245,36 @@ h6 {
     margin: auto;
     margin-bottom:5px;
     }
+  .txt2 {
+    height: 35px;
+    width: 100%;
+    border:solid;
+    border-color: blueviolet;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(4, 127, 251);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: right;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom:5px;
+    }
+  .txt2::placeholder {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .lab1 {
+    color: rgb(206, 47, 255);
+    font-size: 20px;
+    text-align: left;
+    padding-right: 10px;
+    display: block;
+    margin: auto;
+    padding-bottom: 15px;
+    }
+
   .card1 {
     display:block;
     margin:20px auto 0px auto;
