@@ -26,6 +26,15 @@ h4 {
     padding-top:2%;
     padding-bottom:2%
     }
+h5 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    font-variant: cursive;
+    color:rgb(57, 236, 252);
+    text-align:center;
+    }
+
 h6 {
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
@@ -246,7 +255,7 @@ h6 {
     margin-bottom:5px;
     }
   .txt2 {
-    height: 35px;
+    height: 50px;
     width: 100%;
     border:solid;
     border-color: blueviolet;
@@ -257,8 +266,6 @@ h6 {
     font-weight: 400;
     text-align: right;
     padding: 10px;
-    display: block;
-    margin: auto;
     margin-bottom:5px;
     }
   .txt2::placeholder {
@@ -266,13 +273,12 @@ h6 {
     font-weight: 300;
   }
   .lab1 {
-    color: rgb(206, 47, 255);
-    font-size: 20px;
-    text-align: left;
+    color: rgb(245, 213, 255);
+    font-size: 24px;
+    text-align: right;
     padding-right: 10px;
     display: block;
     margin: auto;
-    padding-bottom: 15px;
     }
 
   .card1 {
@@ -284,7 +290,7 @@ h6 {
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
-    padding: 45px 0px 30px 0px;
+    padding: 45px 10px 30px 10px;
     border: solid;
     border-color: rgb(28, 28, 28);
     border-radius: 20px;

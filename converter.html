@@ -91,7 +91,7 @@
       <div class="col-md-4 col-sm-12">
         <div class="card d-block" style="background-color:black;opacity:80%;margin:auto;margin-top:30px;padding:15px; width:90%">
           <div class="card-title" style="color:#67bdfe">
-            <img src="images/calctext.png" style="height:60px">    
+            <img src="images/convtext.png" style="height:80px">    
           </div>
           <div class="card-body">
             <p style="color:rgb(212, 212, 212)"> Create a converter using the things you learned this past sessions (Oct 10-12, 2022). Your converter must have a dropdown for different units. </p>
@@ -101,41 +101,37 @@
 
       <!-- Output -->
       <div class="col-md-4 col-sm-12">
-        <div class="card card1 d-flex justify-content-center shadow-lg">
+        <div class="card card1 d-flex shadow-lg">
+          <h5> Enter a value in any of the fields<br> and the inputted weight will be <br> automatically converted to <br>other units.</h5><br>
           <center>
-            <div class="row mb-sm-1">
-              <div class="col-sm-9">
+            <div class="row mb-sm-3">
+              <label class="col-sm-3 col-form-label lab1">Ounce</label>
+              <div class="col-sm-8">
                   <input id="inputOunce" placeholder="Ounce" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
               </div>
-              <label class="col-s m-3 col-form-label lab1">Ounce</label>
+            </div>
+            <div class="row mb-sm-3">
+              <label class="col-sm-3 col-form-label lab1">Pound</label>
+              <div class="col-sm-8">
+                  <input id="inputPound" placeholder="Pound" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
               </div>
             </div>
-            <div class="row mb-sm-1">
-              <div class="col-sm-9">
-                  <input id="inputPound" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
-              </div>
-              <label class="col-s m-3 col-form-label lab1">Pound</label>
-              </div>
-            </div>
-            <div class="row mb-sm-1">
-              <div class="col-sm-9">
-                  <input id="inputMg" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
-              </div>
-              <label class="col-s m-3 col-form-label lab1">Milligram</label>
+            <div class="row mb-sm-3">
+              <label class="col-sm-3 col-form-label lab1">Milligram</label>
+              <div class="col-sm-8">
+                  <input id="inputMg" placeholder="Milligram" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
               </div>
             </div>
-            <div class="row mb-sm-1">
-              <div class="col-sm-9">
-                  <input id="inputGram" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
-              </div>
-              <label class="col-s m-3 col-form-label lab1">Grams</label>
+            <div class="row mb-sm-3">
+              <label class="col-sm-3 col-form-label lab1">Grams</label>
+              <div class="col-sm-8">
+                  <input id="inputGram" placeholder="Gram" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
               </div>
             </div>
-            <div class="row mb-sm-1">
-              <div class="col-sm-9">
-                  <input id="inputKg" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
-              </div>
-              <label class="col-s m-3 col-form-label lab1">Kilogram</label>
+            <div class="row mb-sm-3">
+              <label class="col-sm-3 col-form-label lab1">Kilogram</label>
+              <div class="col-sm-8">
+                  <input id="inputKg" placeholder="Kilogram" class="txt2" type="text" oninput="massConverter(this.id,this.value)" onchange="massConverter(this.id,this.value)">
               </div>
             </div>
 
@@ -148,34 +144,34 @@
                 var inputGram = document.getElementById("inputGram");
                 var inputKg = document.getElementById("inputKg");
                 if (source=="inputOunce") {
-                  inputPound.value=(valNum*0.0625).toFixed(2);
-                  inputMg.value=(valNum*28349.5).toFixed(2);
-                  inputGram.value=(valNum*28.349).toFixed(2);
-                  inputKg.value=(valNum*0.028349).toFixed(2);
+                  inputPound.value=(valNum*0.0625).toLocaleString("en-US");
+                  inputMg.value=(valNum*28349.5).toLocaleString("en-US");
+                  inputGram.value=(valNum*28.349).toLocaleString("en-US");
+                  inputKg.value=(valNum*0.028349).toLocaleString("en-US");
                 }
                 if (source=="inputPound") {
-                  inputOunce.value=(valNum*16).toFixed(2);
-                  inputMg.value=(valNum*453592).toFixed(2);
-                  inputGram.value=(valNum*453.592).toFixed(2);
-                  inputKg.value=(valNum*0.453592).toFixed(2);
+                  inputOunce.value=(valNum*16).toLocaleString("en-US");
+                  inputMg.value=(valNum*453592).toLocaleString("en-US");
+                  inputGram.value=(valNum*453.592).toLocaleString("en-US");
+                  inputKg.value=(valNum*0.453592).toLocaleString("en-US");
                 }
                 if (source=="inputMg") {
-                  inputOunce.value=(valNum*3.5274).toFixed(2);
-                  inputPound.value=(valNum*2.20462).toFixed(2);
-                  inputGram.value=(valNum*0.001).toFixed(2);
-                  inputKg.value=(valNum*0.000001).toFixed(2);
+                  inputOunce.value=(valNum*3.5274).toLocaleString("en-US");
+                  inputPound.value=(valNum*2.20462).toLocaleString("en-US");
+                  inputGram.value=(valNum*0.001).toLocaleString("en-US");
+                  inputKg.value=(valNum*0.000001).toLocaleString("en-US");
                 }
                 if (source=="inputGram") {
-                  inputOunce.value=(valNum*0.035274).toFixed(2);
-                  inputPound.value=(valNum*0.00220462).toFixed(2);
-                  inputMg.value=(valNum*1000).toFixed(2);
-                  inputKg.value=(valNum*0.001).toFixed(2);
+                  inputOunce.value=(valNum*0.035274).toLocaleString("en-US");
+                  inputPound.value=(valNum*0.00220462).toLocaleString("en-US");
+                  inputMg.value=(valNum*1000).toLocaleString("en-US");
+                  inputKg.value=(valNum*0.001).toLocaleString("en-US");
                 }
                 if (source=="inputKg") {
-                  inputOunce.value=(valNum*35.274).toFixed(2);
-                  inputPound.value=(valNum*2.20462).toFixed(2);
-                  inputMg.value=(valNum*1000000).toFixed(2);
-                  inputGram.value=(valNum*1000).toFixed(2);
+                  inputOunce.value=(valNum*35.274).toLocaleString("en-US");
+                  inputPound.value=(valNum*2.20462).toLocaleString("en-US");
+                  inputMg.value=(valNum*1000000).toLocaleString("en-US");
+                  inputGram.value=(valNum*1000).toLocaleString("en-US");
                 }
                 else if (document.getElementById("inputOunce").value == ""){
                   inputPound.value="";
