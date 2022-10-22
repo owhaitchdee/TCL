@@ -32,7 +32,7 @@ const game = () => {
 				const computerChoice = computerOptions[choiceNumber];
 
 				// Function to check who wins
-				winner(this.value,computerChoice)
+				winner(this.value,computerChoice);
 				
 				// Calling gameOver function after 10 moves
 				if(moves == 10){
@@ -50,6 +50,16 @@ const game = () => {
 		const computerScoreBoard = document.querySelector('.c-count');
 		player = player.toLowerCase();
 		computer = computer.toLowerCase();
+
+		const table = document.getElementById("history");
+		const row = table.insertRow(-1);
+		const cell1 = row.insertCell(0);
+		const cell2 = row.insertCell(1);
+		const cell3 = row.insertCell(2);		
+		const cell4 = row.insertCell(3);
+
+		cell1.innerHTML = (moves);
+		
 		if(player == 'rock'){
             var image1 = document.getElementById('user_weapon');
             image1.src = "images/rock.png";
@@ -59,6 +69,9 @@ const game = () => {
 				computerScoreBoard.textContent = computerScore;
                 var image2 = document.getElementById('comp_weapon');
                 image2.src = "images/paper.png";
+				cell2.innerHTML = 'Rock';
+				cell3.innerHTML = 'Paper';
+				cell4.innerHTML = 'Computer Won';
 
 			}else if(computer == 'scissors'){
 				result.textContent = 'Player Won'
@@ -66,11 +79,17 @@ const game = () => {
 				playerScoreBoard.textContent = playerScore;
                 var image2 = document.getElementById('comp_weapon');
                 image2.src = "images/scissors.png";
+				cell2.innerHTML = 'Rock';
+				cell3.innerHTML = 'Scissors';
+				cell4.innerHTML = 'Player Won';
 
 			}else {
                 result.textContent = 'Tie'
                 var image2 = document.getElementById('comp_weapon');
                 image2.src = "images/rock.png";                
+				cell2.innerHTML = 'Rock';
+				cell3.innerHTML = 'Rock';
+				cell4.innerHTML = 'Tie';
             }
 		}
 		else if(player == 'scissors'){
@@ -81,17 +100,27 @@ const game = () => {
 				computerScore++;
 				computerScoreBoard.textContent = computerScore;
                 var image2 = document.getElementById('comp_weapon');
-                image2.src = "images/rock.png";   
+                image2.src = "images/rock.png";
+				cell2.innerHTML = 'Scissors';
+				cell3.innerHTML = 'Rock';
+				cell4.innerHTML = 'Computer Won';   
 			}else if(computer == 'paper'){
 				result.textContent = 'Player Won';
 				playerScore++;
 				playerScoreBoard.textContent = playerScore;
                 var image2 = document.getElementById('comp_weapon');
                 image2.src = "images/paper.png";
+				cell2.innerHTML = 'Scissors';
+				cell3.innerHTML = 'Paper';
+				cell4.innerHTML = 'Player Won';
+
 			}else {
                 result.textContent = 'Tie'
                 var image2 = document.getElementById('comp_weapon');
-                image2.src = "images/scissors.png";                
+                image2.src = "images/scissors.png";
+				cell2.innerHTML = 'Scissors';
+				cell3.innerHTML = 'Scissors';
+				cell4.innerHTML = 'Tie';                
             }
 		}
 		else if(player == 'paper'){
@@ -102,17 +131,29 @@ const game = () => {
 				computerScore++;
 				computerScoreBoard.textContent = computerScore;
                 var image2 = document.getElementById('comp_weapon');
-                image2.src = "images/scissors.png";   
+                image2.src = "images/scissors.png";
+				cell2.innerHTML = 'Paper';
+				cell3.innerHTML = 'Scissors';
+				cell4.innerHTML = 'Computer Won';
+   
 			}else if(computer == 'rock'){
 				result.textContent = 'Player Won';
 				playerScore++;
 				playerScoreBoard.textContent = playerScore;
                 var image2 = document.getElementById('comp_weapon');
-                image2.src = "images/rock.png";   
+                image2.src = "images/rock.png";
+				cell2.innerHTML = 'Paper';
+				cell3.innerHTML = 'Rock';
+				cell4.innerHTML = 'Computer Won';
+   
 			}else {
                 result.textContent = 'Tie'
                 var image2 = document.getElementById('comp_weapon');
-                image2.src = "images/paper.png";                
+                image2.src = "images/paper.png";
+				cell2.innerHTML = 'Paper';
+				cell3.innerHTML = 'Paper';
+				cell4.innerHTML = 'Tie';
+                
             }
 		}
 	}
@@ -140,7 +181,11 @@ const game = () => {
 			finalResult.innerText = 'You Won The Game'
 			finalResult.style.color = 'rgb(1, 67, 1)';
 			result.style.display = 'none';
-
+			reloadBtn.innerText = 'Restart';
+			reloadBtn.style.display = 'flex'
+			reloadBtn.addEventListener('click',() => {
+				window.location.reload();
+			})
 		}
 		else if(playerScore < computerScore){
 			finalResult.style.fontSize = '2rem';
