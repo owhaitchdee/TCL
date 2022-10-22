@@ -181,11 +181,6 @@ const game = () => {
 			finalResult.innerText = 'You Won The Game'
 			finalResult.style.color = 'rgb(1, 67, 1)';
 			result.style.display = 'none';
-			reloadBtn.innerText = 'Restart';
-			reloadBtn.style.display = 'flex'
-			reloadBtn.addEventListener('click',() => {
-				window.location.reload();
-			})
 		}
 		else if(playerScore < computerScore){
 			finalResult.style.fontSize = '2rem';
