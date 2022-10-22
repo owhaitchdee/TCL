@@ -1,0 +1,242 @@
+// app.js
+
+// Complete logic of game inside this function
+const game = () => {
+	let playerScore = 0;
+	let computerScore = 0;
+	let moves = 0;
+    let rounds = 1;
+
+
+	// Function to
+	const playGame = () => {
+		const rockBtn = document.getElementById('rock');
+		const paperBtn = document.getElementById('paper');
+		const scissorBtn = document.getElementById('scissor');
+		const playerOptions = [rockBtn,paperBtn,scissorBtn];
+		const computerOptions = ['rock','paper','scissors']
+		
+		// Function to start playing game
+		playerOptions.forEach(option => {
+			option.addEventListener('click',function(){
+
+				const movesLeft = document.querySelector('.movesleft');
+				moves++;
+				movesLeft.innerHTML = `Moves Left: ${10-moves}`;
+
+                const round_count = document.querySelector('.round_count');
+                rounds++;
+                round_count.innerHTML = `Round: ${rounds}`;
+
+				const choiceNumber = Math.floor(Math.random()*3);
+				const computerChoice = computerOptions[choiceNumber];
+
+				// Function to check who wins
+				winner(this.value,computerChoice)
+				
+				// Calling gameOver function after 10 moves
+				if(moves == 10){
+					gameOver(playerOptions,movesLeft);
+				}
+			})
+		})
+		
+	}
+
+	// Function to decide winner
+	const winner = (player,computer) => {
+		const result = document.querySelector('.result');
+		const playerScoreBoard = document.querySelector('.p-count');
+		const computerScoreBoard = document.querySelector('.c-count');
+		player = player.toLowerCase();
+		computer = computer.toLowerCase();
+		if(player == 'rock'){
+            var image1 = document.getElementById('user_weapon');
+            image1.src = "images/rock.png";
+            if(computer == 'paper'){
+				result.textContent = 'Computer Won';
+				computerScore++;
+				computerScoreBoard.textContent = computerScore;
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/paper.png";
+
+			}else if(computer == 'scissors'){
+				result.textContent = 'Player Won'
+				playerScore++;
+				playerScoreBoard.textContent = playerScore;
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/scissors.png";
+
+			}else {
+                result.textContent = 'Tie'
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/rock.png";                
+            }
+		}
+		else if(player == 'scissors'){
+            var image1 = document.getElementById('user_weapon');
+            image1.src = "images/scissors.png";
+			if(computer == 'rock'){
+				result.textContent = 'Computer Won';
+				computerScore++;
+				computerScoreBoard.textContent = computerScore;
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/rock.png";   
+			}else if(computer == 'paper'){
+				result.textContent = 'Player Won';
+				playerScore++;
+				playerScoreBoard.textContent = playerScore;
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/paper.png";
+			}else {
+                result.textContent = 'Tie'
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/scissors.png";                
+            }
+		}
+		else if(player == 'paper'){
+            var image1 = document.getElementById('user_weapon');
+            image1.src = "images/paper.png";
+			if(computer == 'scissors'){
+				result.textContent = 'Computer Won';
+				computerScore++;
+				computerScoreBoard.textContent = computerScore;
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/scissors.png";   
+			}else if(computer == 'rock'){
+				result.textContent = 'Player Won';
+				playerScore++;
+				playerScoreBoard.textContent = playerScore;
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/rock.png";   
+			}else {
+                result.textContent = 'Tie'
+                var image2 = document.getElementById('comp_weapon');
+                image2.src = "images/paper.png";                
+            }
+		}
+	}
+
+	// Function to run when game is over
+	const gameOver = (playerOptions,movesLeft) => {
+
+		const chooseMove = document.querySelector('.move');
+		const finalResult = document.querySelector('.round_count');
+		const reloadBtn = document.querySelector('.reload');
+		const result = document.querySelector('.result');
+		
+
+		playerOptions.forEach(option => {
+			option.style.display = 'none';
+			option.disabled = true;
+		})
+
+		chooseMove.innerText = 'Game Over!!'
+		movesLeft.style.display = 'none';
+
+
+		if(playerScore > computerScore){
+			finalResult.style.fontSize = '2rem';
+			finalResult.innerText = 'You Won The Game'
+			finalResult.style.color = 'rgb(1, 67, 1)';
+			result.style.display = 'none';
+
+		}
+		else if(playerScore < computerScore){
+			finalResult.style.fontSize = '2rem';
+			finalResult.innerText = 'You Lost The Game';
+			finalResult.style.color = 'rgb(67, 1, 1)';
+			result.style.display = 'none';
+		}
+		else{
+			finalResult.style.fontSize = '2rem';
+			finalResult.innerText = "It's a Tie";
+			finalResult.style.color = 'black'
+			result.style.display = 'none';
+		}
+		reloadBtn.innerText = 'Restart';
+		reloadBtn.style.display = 'flex'
+		reloadBtn.addEventListener('click',() => {
+			window.location.reload();
+		})
+	}
+
+
+	// Calling playGame function inside game
+	playGame();
+	
+}
+
+// Calling the game function
+game();
+
+
+
+
+/*
+function play() {
+
+    //function to display user choice
+    var user_button = document.querySelector("input[name=choice]:checked");
+    var user_choice = user_button.value;
+    
+    //displaying the user choice
+    var image1 = document.getElementById('user_weapon');
+    if (user_choice =='Bato') {
+        image1.src = "images/rock.png";
+    }
+    else if(user_choice == 'Papel'){
+        image1.src = "images/paper.png";
+    }
+    else {
+        image1.src = "images/scissors.png";
+    };
+    
+    //displaying the random computer choice
+    var types = ['Bato', 'Papel', 'Gunting'];
+    var comp_choice = types[Math.floor(Math.random() * (types.length))];
+  
+    if (comp_choice =='Bato') {
+        document.getElementById("comp_weapon").src = "images/rock.png";
+    }
+    else if(comp_choice == 'Papel'){
+        document.getElementById("comp_weapon").src = "images/paper.png";
+    }
+    else {
+        document.getElementById("comp_weapon").src = "images/scissors.png";
+    };
+
+
+
+};
+  
+
+  /*
+    if (user_choice == comp_choice) {
+      document.getElementById("result").textContent = "Tie!";
+      return;
+    }
+  
+    switch (comp_choice) {
+      case "Rock":
+        if (user_choice == "Paper") {
+          document.getElementById("result").textContent = "You Win!";
+        } else {
+          document.getElementById("result").textContent = "You Lost.";
+        }
+        break;
+      case "Paper":
+        if (user_choice == "Scissors") {
+          document.getElementById("result").textContent = "You Win!";
+        } else {
+          document.getElementById("result").textContent = "You Lost.";
+        }
+        break;
+      case "Scissors":
+        if (user_choice == "Rock") {
+          document.getElementById("result").textContent = "You Win!";
+        } else {
+          document.getElementById("result").textContent = "You Lost.";
+        }
+    }
+  }*/

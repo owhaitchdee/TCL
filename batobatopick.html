@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Gallery</title>
+    <title>Gallery-RockPaperScissors</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b63f0cdae2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,44 +83,82 @@
       </div>
     </div>
   </div>
-  
-  <!--Exercise Description-->
-  <div class="container" style="padding-right:10%;padding-left:10%">
-    <div class="row">
-      <h2 style="font-size:40px;margin-bottom:5%"> Design Gallery </h2>
 
-      <div class="col-md-3 col-sm-12">
-        <div class="card d-block" style="margin:10px;background:none;border:none">
-          <div class="card-body" style="background-color:black;opacity:95%;border-radius: 15px;"> 
-            <h6> CALCULATOR </h6> <br>
-            <a href="calculator.html"><img src="images/neon-calculator-icon-vector.jpg" style="height:180px;display:block;margin:auto"></a>
+  <!--Exercise Description-->
+  <div class="container-fluid" style="padding-left: 3%; padding-right: 3%;">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <div class="card d-block" style="background-color:black;opacity:80%;margin:auto;margin-top:30px;padding:15px; width:90%">
+          <div class="card-title" style="color:#67bdfe">
+            <img src="images/rpstitle.png" style="height:67px">    
+          </div>
+          <div class="card-body">
+            <p style="color:rgb(212, 212, 212)"> Create a Javascript-based game called Rock Paper Scissors.  The opponent will be the computer and program should be able to generate the computers choice. Player will have up to 10 tries to beat the computer</p>
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-12">
-        <div class="card d-block" style="margin:10px;background:none;border:none">
-            <div class="card-body" style="background-color:black;opacity:80%;border-radius: 15px;"> 
-              <h6> CONVERTER </h6> <br>
-              <a href="converter.html"><img src="images/converter.jpg" style="height:180px;display:block;margin:auto"></a>
+
+      <!-- Output -->
+      <div class="col-md-4 col-sm-12">
+        <div class="card card2 d-flex shadow-lg">
+          <section class="game">
+          <center>
+            <h5 style="padding:0px"><div class="move">Choose your weapon</div> </h5>
+            <div class="options" style="margin-top:0px;margin-bottom:5%;display: flex; justify-content: center; position: relative; white-space: nowrap;">
+                <label>
+                  <input class="rock" type="radio" name="choice" value="rock" id="rock"/> 
+                  <img class="img-but" src="images/but_rock.png">
+                </label>
+                <label>
+                  <input class="paper" type="radio" name="choice" value="paper" id="paper"/> 
+                  <img class="img-but" src="images/but_hand.png">
+                </label>
+                <label>
+                  <input class="scissor" type="radio" name="choice" value="scissors" id="scissor"/> 
+                  <img class="img-but" src="images/but_sci.png">
+                </label>
+
+              <!--  <button class="rock" style="border:none;background:none;border-radius: 20px;"><img class="img-but" src="images/but_rock.png"></button>
+                <button class="paper" style="border:none;background:none"><img class="img-but" src="images/but_hand.png"></button>
+                <button class="scissor" style="border:none;background:none"><img class="img-but" src="images/but_sci.png"></button>--> 
             </div>
-          </div>
-      </div>
-      <div class="col-md-3 col-sm-12">
-        <div class="card d-block" style="margin:10px;background:none;border:none">
-          <div class="card-body" style="background-color:black;opacity:80%;border-radius: 15px;"> 
-            <h6> ROCK PAPER SCISSORS</h6> <br>
-            <a href="batobatopick.html"><img src="images/rpscover.webp" style="width:180px;display:block;margin:auto;margin-top:20px;margin-bottom:25px"></a>
-          </div>
+            <h3 class="glow"><div class="round_count" style="color:rgb(0, 0, 0)"> Round 1 </div></h3>
+            <div class="container" style="display: flex; justify-content: center; position: relative; white-space: nowrap;">
+                <img class="img-but2" id="user_weapon" src="images/rps.gif" >
+                <img src="images/vs.png" style="width:100px;height:100px;margin-top:15px">
+                <img class="img-but2" id="comp_weapon" src="images/rps2.gif">
+            </div>
+
+            <div class="score" style="margin-left:10px"> 
+              <div class="playerScore">
+                  <h6>Player</h6>
+                  <h5 class="p-count count">0</h5>
+              </div>      
+              <span style="margin-right:30px":></span>
+              <div class="computerScore">
+                  <h6>Computer</h6>
+                  <h5 class="c-count count">0</h5>
+   
+              </div>
+              </div>
+
+            <!--  <h6 style="padding-left:5%">You<span style="padding-left:55%"></span>Computer</h6>-->
+            <h5><div class="result">
+            </div></h5>  
+            <h6><div class="movesleft">Moves Left: 10 </div></h6>
+            
+            <!--Reload the game--> 
+            <button class="reload btn btn-primary"></button>
+          </center>
+          </section>
         </div>
       </div>
-      <div class="col-md-3 col-sm-12">
-        <div class="card d-block" style="margin:10px;background:none;border:none">
-          <div class="card-body" style="background-color:black;opacity:80%;border-radius: 15px;"> 
-            <h6> EXERCISE #4 </h6> <br>
-            <a href="calculator.html"><img src="images/samplegallery.jpg" style="height:180px;display:block;margin:auto"></a>
-          </div>
-        </div>
+
+      <div class="col-md-3 col-sm-12" style="align-items: flex-end;
+      display: flex;">
+          <img src="images/anim.gif" class="mx-auto d-block d-flex" style="width: 450px;vertical-align: bottom;">
       </div>
+
     </div>
   </div>
 
@@ -144,4 +182,5 @@
     </div>
   </footer> 
 </body>
+<script src="bbp.js"></script>
 </html>
