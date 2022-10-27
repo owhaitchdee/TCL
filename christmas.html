@@ -90,42 +90,53 @@
       <div class="col-md-4 col-sm-12">
         <div class="card d-block" style="background-color:black;opacity:80%;margin:auto;margin-top:30px;padding:15px; width:90%">
           <div class="card-title" style="color:#67bdfe">
-            <img src="images/convtext.png" style="height:80px">    
+            <img src="images/rgbtext.png" style="width:70%">    
           </div>
           <div class="card-body">
-            <p style="color:rgb(212, 212, 212)"> Create a converter using the things you learned this past sessions (Oct 10-12, 2022). Your converter must have a dropdown for different units. </p>
+            <p style="color:rgb(212, 212, 212)"> Create a program that will change to a different color when a button is clicked. The rgb value will also be shown in the middle.  You can also add time on how many seconds will passed before the background will stop changing colors.  You can also create an input type on how many seconds will pass before the color will change. </p>
           </div>
         </div>
       </div>
 
       <!-- Output -->
       <div class="col-md-4 col-sm-12">
-        <div class="card card1 d-flex shadow-lg" style="background-color:black">
+        <div class="card card2 d-flex" style="background-color:rgb(16, 16, 16)">
           <h5> MERRY CHRISTMAS!</h5><br>
           <center>
-            <div id="row1" style="font-size:30px"><i class="fa-solid fa-star"></i></div>
-            <div id="row2" style="font-size:30px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <div id="row3" style="font-size:30px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <div id="row4" style="font-size:30px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <div id="row5" style="font-size:30px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <div id="row6" style="font-size:30px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <div id="row7" style="font-size:30px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <div id="row8" style="font-size:30px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-
+            <div id="row1" style="font-size:25px"><i class="fa-solid fa-star"></i></div>
+            <div id="row2" style="font-size:25px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <div id="row3" style="font-size:25px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <div id="row4" style="font-size:25px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <div id="row5" style="font-size:25px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <div id="row6" style="font-size:25px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <div id="row7" style="font-size:25px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <div id="row8" style="font-size:25px"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <br>
+            <input type=text class="txt2" id="switchNo" style="width:40%" placeholder="Input duration"/>
+            <input type=text class="txt2"id="speed" style="width:40%" placeholder="Enter interval"/>
+            <br><br>
             <button id="start" class="btn btn-primary" onclick="paskorows();">Start</button>
-            <button id="stop" class="btn btn-primary" onclick="stop();">Stop</button>
-            <p id="rgbnum"></p>
-            <p id="rgbnumrow1"></p>
-            <p id="rgbnumrow2"></p>
-
           </center>
         </div>
       </div>  
 
-      <div class="col-md-3 col-sm-12" style="align-items: flex-end;
-      display: flex;">
-          <img src="images/anim.gif" class="mx-auto d-block d-flex" style="width: 450px;vertical-align: bottom;">
+      <div class="col-md-4 col-sm-12">
+        <div class="card d-block" style="background-color:black;opacity:80%;margin:auto;margin-top:30px;padding:15px; width:90%">
+          <div class="card-title" style="color:#67bdfe">RGB Colors
+            <br><br>
+            <h5 id="rgbnum1">First row</h4>
+            <h5 id="rgbnum2">Second row</h4>
+            <h5 id="rgbnum3">Third row</h4>
+            <h5 id="rgbnum4">Fourth row</h4>
+            <h5 id="rgbnum5">Fifth row</h4>
+            <h5 id="rgbnum6">Sixth row</h4>
+            <h5 id="rgbnum7">Seventh row</h4>
+            <h5 id="rgbnum8">Eight row</h4>
+
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 

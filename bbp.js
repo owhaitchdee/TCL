@@ -169,13 +169,13 @@ const game = () => {
 			option.disabled = true;
 		})
 
-		chooseMove.innerText = 'Game Over!!'
+		chooseMove.innerText = 'Game Over!!';
 		movesLeft.style.display = 'none';
 
 
 		if(playerScore > computerScore){
 			finalResult.style.fontSize = '2rem';
-			finalResult.innerText = 'You Won The Game'
+			finalResult.innerText = 'You Won The Game';
 			finalResult.style.color = 'rgb(1, 67, 1)';
 			result.style.display = 'none';
 		}
@@ -188,11 +188,11 @@ const game = () => {
 		else{
 			finalResult.style.fontSize = '2rem';
 			finalResult.innerText = "It's a Tie";
-			finalResult.style.color = 'black'
+			finalResult.style.color = 'black';
 			result.style.display = 'none';
 		}
 		reloadBtn.innerText = 'Restart';
-		reloadBtn.style.display = 'flex'
+		reloadBtn.style.display = 'flex';
 		reloadBtn.addEventListener('click',() => {
 			window.location.reload();
 		})
