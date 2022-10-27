@@ -1,6 +1,3 @@
-// app.js
-
-// Complete logic of game inside this function
 const game = () => {
 	let playerScore = 0;
 	let computerScore = 0;
@@ -213,70 +210,3 @@ game();
 
 
 
-/*
-function play() {
-
-    //function to display user choice
-    var user_button = document.querySelector("input[name=choice]:checked");
-    var user_choice = user_button.value;
-    
-    //displaying the user choice
-    var image1 = document.getElementById('user_weapon');
-    if (user_choice =='Bato') {
-        image1.src = "images/rock.png";
-    }
-    else if(user_choice == 'Papel'){
-        image1.src = "images/paper.png";
-    }
-    else {
-        image1.src = "images/scissors.png";
-    };
-    
-    //displaying the random computer choice
-    var types = ['Bato', 'Papel', 'Gunting'];
-    var comp_choice = types[Math.floor(Math.random() * (types.length))];
-  
-    if (comp_choice =='Bato') {
-        document.getElementById("comp_weapon").src = "images/rock.png";
-    }
-    else if(comp_choice == 'Papel'){
-        document.getElementById("comp_weapon").src = "images/paper.png";
-    }
-    else {
-        document.getElementById("comp_weapon").src = "images/scissors.png";
-    };
-
-
-
-};
-  
-
-  /*
-    if (user_choice == comp_choice) {
-      document.getElementById("result").textContent = "Tie!";
-      return;
-    }
-  
-    switch (comp_choice) {
-      case "Rock":
-        if (user_choice == "Paper") {
-          document.getElementById("result").textContent = "You Win!";
-        } else {
-          document.getElementById("result").textContent = "You Lost.";
-        }
-        break;
-      case "Paper":
-        if (user_choice == "Scissors") {
-          document.getElementById("result").textContent = "You Win!";
-        } else {
-          document.getElementById("result").textContent = "You Lost.";
-        }
-        break;
-      case "Scissors":
-        if (user_choice == "Rock") {
-          document.getElementById("result").textContent = "You Win!";
-        } else {
-          document.getElementById("result").textContent = "You Lost.";
-        }
-    }
-  }*/
