@@ -24,7 +24,6 @@
       <div class="float-end">
         <span style="padding:5px"></span>
         <button class="btn" role="button" style="font-size:25px" ><i class="fa-solid fa-prescription-bottle-medical"></i></button>
-        <!-- <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-prescription-bottle-medical"></i></button> -->
       </div>
 
       <div class="collapse navbar-collapse" id="dmenu">
@@ -43,13 +42,13 @@
     </div>
   </nav>
 
-  <!--Modal for TCL Details-->
+  <!--Modal for Patient Details-->
   <div class="modal fade" id="PatientDetails" role="dialog">
     <div class="modal-dialog modal-dialog-centered justify-content-center">
       <div class="modal-content" style="background-color:rgb(254, 254, 254);width:85%;">
         <div class="modal-header" style="height:40px">
           <h4 style="text-align:center;margin-top:2%">Patient Details</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-dismiss="modal" id="close1" style="border:none; background:none">&times;</button>
         </div>
         <div class="container" style="margin-top:4%;margin-bottom:4%;text-align: center;">
           <h3>AB-03-0091-NX</h3>
@@ -266,29 +265,12 @@
   </footer> 
 
 <script>
-  const passFunction = function (){
-    let pass = document.getElementById("pword").value;
-    let final_password = pass;
 
-    // WD20P-SC    
-
-    switch (final_password) {
-        case "WD20P-SC":
-            alert("Successfully logged in");
-            break;
-        case "":
-            alert("No pasword entered");
-            break;
-        default:
-            alert("Wrong password");
-            location.reload();
-            break;
-    }
-  }
-  var span = document.getElementsByClassName("close")[0];
-    span.onclick = function() {
-    modal.style.display = "none";
-    }
+  $(document).ready(function(){
+    $("#close1").click(function(){
+      $("#PatiendDetails").modal('hide');
+      });
+    });
 
 </script>
 </body>
