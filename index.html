@@ -44,7 +44,7 @@
   </nav>
 
   <!--Modal for TCL Details-->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="PatientDetails" role="dialog">
     <div class="modal-dialog modal-dialog-centered justify-content-center">
       <div class="modal-content" style="background-color:rgb(254, 254, 254);width:85%;">
         <div class="modal-header" style="height:40px">
@@ -76,9 +76,9 @@
         <div class="container-fluid">
           <table class="table" style="font-size:13px;width:100%;text-align: left;">
             <thead style="text-align:center;font-weight:600;font-size:13px;   background-color: #9cdedd;">
-              <td> Product</td>
-              <td> Qty</td>
-              <td> Amount</td>
+              <td> PRODUCT</td>
+              <td> QTY</td>
+              <td> AMOUNT</td>
             </thead>
             <tr>
               <th style="padding-left: 40px;">Product 1</th>
@@ -102,13 +102,64 @@
     </div>
   </div>
 
+  <!--Modal for TCL Details-->
+  <div class="modal fade" id="TodayDetails" role="dialog">
+    <div class="modal-dialog modal-dialog-centered justify-content-center">
+      <div class="modal-content" style="background-color:rgb(254, 254, 254);width:85%;">
+        <div class="modal-header" style="height:40px">
+          <h4 style="text-align:center;margin-top:2%">TC Today</h4>
+          <span class="close">&times;</span>
+        </div>
+        <div class="container" style="margin-top:4%;margin-bottom:4%;text-align: center;">
+          <h3>April 27, 2023</h3>
+          <p>Total: ₱10,000 <br>
+          No. of Cards: 14</p>      
+        </div>
+        <div class="container-fluid">
+          <table class="table" style="font-size:13px;width:100%;text-align: left;">
+            <thead style="text-align:center;font-weight:600;font-size:13px;   background-color: #9cdedd;">
+              <td> MD NAME</td>
+              <td> QTY</td>
+              <td> AMOUNT </td>
+            </thead>
+            <tr>
+              <th style="padding-left: 20px;">Carlos, Juan</th>
+              <td style="text-align: center;">4</td>
+              <td style="text-align: center;">2,910</td>
+            </tr>
+            <tr>
+              <th style="padding-left: 20px;">Dela Cruz, Anna</th>
+              <td style="text-align: center;">2</td>
+              <td style="text-align: center;">1,150</td>
+            </tr>
+            <tr>
+              <th style="padding-left: 20px;">Esguerra, Michael</th>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">2,365</td>
+            </tr>
+            <tr>
+              <th style="padding-left: 20px;">Dela Cruz, Anna</th>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">2,365</td>
+            </tr>
+            <tr>
+              <th style="padding-left: 20px;">Esguerra, Michael</th>
+              <td style="text-align: center;">2</td>
+              <td style="text-align: center;">1,210</td>
+            </tr>
+          </table>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!--Exercise Description-->
   <div class="container" style="padding-right:5%;padding-left:5%">
     <div class="row" style="text-align:center;margin-bottom:25px">
       <h2> Tipid Card Live</h2>
-      <div class="col col-sm-5 mt-3" >Today: 21</div>
-      <div class="col col-sm-2 mt-3" ></div>
-      <div class="col col-sm-5 mt-3">Total: 10,000</div>      
+      <div class="col col-sm-5 mt-3" ><a data-bs-toggle="modal" data-bs-target="#TodayDetails">Today: 21</div></a>
+      <div class="col col-sm-5 mt-3">Total: ₱10,000</div>      
     </div>
     <div class="container">
     <div class="col col-sm-12">
@@ -116,7 +167,7 @@
         <div class="card-title" style="color:#67bdfe">
           <h4>AB-03-0091-NX</h4>
           <h5>03/24/23 - 9:41 AM</h5>
-          <a data-bs-toggle="modal" data-bs-target="#myModal">
+          <a data-bs-toggle="modal" data-bs-target="#PatientDetails">
             <img src="images/Picture2.jpg" alt="" style="display:block;margin:auto;width:90%"></img></a>
         </div>
         <div class="card-body justify-content-center"> 
