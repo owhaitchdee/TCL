@@ -34,74 +34,108 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Settings</a>
-            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Sign Out</a>
-            </ul>
           </li>
-          </ul>
-        </div>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!--Modal for Book Now-->
+  <!--Modal for TCL Details-->
   <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" >
-      <!-- Modal content-->
-      <div class="modal-content" style="background-color:black;width:450px">
-        <div class="container d-flex justify-content-center" style="margin-top:10px; background-color: black;">
-          <div class="form form-control" style="border:none;background: none;">
-            <form class="form rounder p-30 p-sm-2 pb-0" id="loginform" target="_blank" action="" method="POST">
-              <img src="images/header.png" height="50px" style="display: block; margin:auto"></img>
-              <h4 style="text-align:center;margin:2%">Book a Demo Presentation</h4>
-              <br>
-              <div class="form-field mb-3">
-                <input type="text" class="form-control" placeholder="Enter your name" name="name" id="name">
-              </div>
-              <div class="form-field mb-3">
-                <input type="email" class="form-control" placeholder="Enter your email address" name="email" id="email">
-              </div>
-              <div class="form-field mb-3">
-                <input type="text" class="form-control" placeholder="Enter your mobile number " name="phone" id="pword">
-              </div>
-
-              <div class="form-field mb-3">
-                <textarea class="form-control" rows="5" placeholder="Write a short message" name="msg" id="msg" required></textarea>  
-              </div>
-
-              <div class="clearfix" style="margin-bottom: 0;padding-bottom: 0;text-align:center">
-                <button class="btn btn-secondary" type="clear">Clear</button>
-                <button class="btn btn-primary" type="button" class="signupbtn" onclick="(passFunction());">Continue</button>
-              <br>
-              </div>
-            </form>
-          </div>
-        </div>  
+    <div class="modal-dialog modal-dialog-centered justify-content-center">
+      <div class="modal-content" style="background-color:rgb(254, 254, 254);width:85%;">
+        <div class="modal-header" style="height:40px">
+          <h4 style="text-align:center;margin-top:2%">Patient Details</h4>
+          <span class="close">&times;</span>
+        </div>
+        <div class="container" style="margin-top:4%;margin-bottom:4%;text-align: center;">
+          <h3>AB-03-0091-NX</h3>
+          <img src="images/Picture2.jpg" alt="" style="width:75%;"></img>
+          <table style="margin-right: 2%;margin-left: 18%;width:80%;text-align: left;font-size:14px">
+            <tr>
+              <td>Age:</td>
+              <th>63</th>
+            </tr>
+            <tr></tr>
+              <td>Sex:</td>
+              <th>Female</th>
+            </tr>
+            <tr>
+              <td>Location:</td>
+              <th>Malate, Manila</th>
+            </tr>
+            <tr>
+              <td>Birthdate:</td>
+              <th>April 2, 1960</th>
+            </tr>
+          </table>
+        </div>
+        <div class="container-fluid">
+          <table class="table" style="font-size:13px;width:100%;text-align: left;">
+            <thead style="text-align:center;font-weight:600;font-size:13px;   background-color: #9cdedd;">
+              <td> Product</td>
+              <td> Qty</td>
+              <td> Amount</td>
+            </thead>
+            <tr>
+              <th style="padding-left: 40px;">Product 1</th>
+              <td style="text-align: center;">14</td>
+              <td style="text-align: center;">1,837</td>
+            </tr>
+            <tr>
+              <th style="padding-left: 40px;">Product 2</th>
+              <td style="text-align: center;">2</td>
+              <td style="text-align: center;">2,150</td>
+            </tr>
+            <tr>
+              <th style="padding-left: 40px;">Product 3</th>
+              <td style="text-align: center;">28</td>
+              <td style="text-align: center;">1,565</td>
+            </tr>
+          </table>
+        </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!--Exercise Description-->
-  <div class="container" style="padding-right:10%;padding-left:10%">
+  <div class="container" style="padding-right:8%;padding-left:8%">
     <div class="row" style="text-align:center">
       <h2> Tipid Card Live</h2>
-      <div class="col col-sm-6 mt-3" >Today: 21</div>
-      <div class="col col-sm-6 mt-3">Total: 10,000</div>      
+      <div class="col col-sm-5 mt-3" >Today: 21</div>
+      <div class="col col-sm-2 mt-3" ></div>
+      <div class="col col-sm-5 mt-3">Total: 10,000</div>      
       
-      <!-- <div class="col-md-4 col-sm-12">
-        <div class="card d-block" style="margin:11px;padding:10px; width:90%;background:none;border:none">
+    <div class="col-md-4 col-sm-12">
+        <div class="card d-block" style="margin:11px;padding:10px; background:none;border:none">
           <div class="card-title" style="color:#67bdfe">
-            <img src="images/design.png" style="height:170px;display:block;margin:auto;">    
+            <h4>AB-03-0091-NX</h4>
+            <h5>03/24/23 - 9:41 AM</h5>
+            <a data-bs-toggle="modal" data-bs-target="#myModal"><img src="images/Picture2.jpg" alt=""></img></a>
           </div>
-          <div class="card-body" style="background-color:black;opacity:80%;border-radius: 15px;"> 
-            <h6> WEB DESIGN</h6>
-            <p class="par"> Let us design for you a website with the right content targetted to the right audience at the right time. </p>
+          <div class="card-body justify-content-center"> 
+            <table style="margin-right: 2%;margin-left: 10%;width:80%;text-align: left;">
+              <tr>
+                <td>MD:</td>
+                <th>Carlos, Juan</th>
+              </tr>
+              <tr>
+                <td>MR:</td>
+                <th>Santos, Nina</th>
+              </tr>
+              <tr>
+                <td>District:</td>
+                <th>North Manila</th>
+              </tr>
+            </table>
           </div>
+          <hr>
         </div>
       </div>
- -->
-
 
     </div>
   </div>
@@ -143,6 +177,10 @@
             alert("Wrong password");
             location.reload();
             break;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+    modal.style.display = "none";
     }
 }
 
