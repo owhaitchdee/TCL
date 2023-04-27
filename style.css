@@ -366,7 +366,7 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 
 .navbar {
     background-color:#9cdedd;
-    opacity:85%
+    opacity:90%
 }
 .footer {
     background-color:#9cdedd;
@@ -405,8 +405,8 @@ nav .dropdown {
     background:url('../images/arrow.jpg') no-repeat right center;
 }
 nav li:hover a {
-    background: #9300a3;
-    color:rgb(255, 190, 239);
+    background: #015a6b;
+    color:rgb(156, 244, 250);
 }
 nav li ul {
     float: left;
@@ -456,4 +456,40 @@ nav li ul a:hover {
     text-decoration: none;
     cursor: pointer;
   }
-
+  .tr-collapsible.collapse,
+  .tr-collapsible.collapse td,
+  .tr-collapsible.collapse *,
+  .tr-collapsible.collapsing,
+  .tr-collapsible.collapsing td,
+  .tr-collapsible.collapsing * {
+      font-size: 0 !important;
+      line-height: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      height: 0 !important;
+      max-height: 0 !important;
+      min-height: 0 !important;
+      opacity: 0;
+  }
+  
+  .tr-collapsible, .tr-collapsible td, .tr-collapsible.collapse.in, .tr-collapsible.collapse.in td, .tr-collapsible.collapse * {
+      padding: 15px !important;
+      font-size: 12px !important;
+      font-weight: 700;
+      padding-left: 30px !important;
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+      height: auto !important;
+      line-height: 12px !important;
+      transition: all 200ms ease-in-out, padding-left 0ms ease, height 0s ease, font-size 0ms ease, line-height 0ms ease;
+      margin-bottom: 0 !important;
+      opacity: 1;
+  }
+  
+  .tr-collapsible.collapse td {
+      display: table-cell;
+  }
+  
+  .tr-collapsible.collapse{
+   display: table-row;
+  }

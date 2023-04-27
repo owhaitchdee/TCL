@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>TCL</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b63f0cdae2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!--Header and Nav-->
+  <nav class="navbar navbar-expand-lg sticky-top" >
+    <div class="container-fluid" style="padding-left: 3%; padding-right: 3%; padding-top:0px; padding-bottom:0px">
+        <button type="button" onclick="history.back()" style="border:none; font-size:20px;background-color: #9cdedd;"><i class="fa-solid fa-arrow-left"></i></button>
+      <a class="navbar-brand" href="index.html" style="color:#811D60">Cathay Drug</a>
+      <div class="float-end">
+        <span style="padding:5px"></span>
+        <button class="btn" role="button" style="font-size:25px" ><i class="fa-solid fa-prescription-bottle-medical"></i></button>
+        <!-- <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-prescription-bottle-medical"></i></button> -->
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Exercise Description-->
+  <div class="container" style="padding-right:5%;padding-left:5%">
+    <div class="row" style="text-align:center;margin-top:10px;margin-bottom:10px">
+      <h3> Carlos, Juan</h3>
+      <div class="container mb-2"  style="font-weight:700">March 1 2023</span>  
+        <div class="container mt-2 mb-1">
+          Total: <span style="font-weight:700;color:rgb(3, 196, 3)"> ₱10,000</span>
+        </div>  
+      </div>
+    </div>
+    <div class="container">
+      <table class="table" style="font-size:13px;width:100%;text-align: left;">
+        <thead style="text-align:center;font-weight:600;font-size:13px;   background-color: #9cdedd;">
+          <td> TC SERIAL</td>
+          <td> AMOUNT </td>
+          <td></td>
+        </thead>
+        <tr style="text-align: center" class="cell-1" data-toggle="collapse" data-target="#demo">
+          <th style="text-align: left">AB-03-0091-NX</th>
+          <td>500</td>
+          <td><a data-toggle="collapse" href="#row1" 
+          aria-expanded="false" aria-controls="row1" href=""> <i class="fa fa-ellipsis-h text-black-50"></i></a> </td>
+          <!-- <td class="table-elipse" data-bs-toggle="collapse" data-target="#demo"><i class="fa fa-ellipsis-h text-black-50"></i></td> -->
+        </tr> 
+
+        <tr id="row1" class="tr-collapsible collapse">
+          <td colspan="4">
+            Products here
+          </td>
+        </tr>
+
+        <tr style="text-align: center">
+          <th style="text-align: left">AB-03-0095-NX</th>
+          <td>600</td>
+          <td><a href="daily2.html"><i class="fa-solid fa-circle-arrow-right" style="color:green;font-size:14px"></i><a></a></td>
+        </tr>
+        <tr style="text-align: center">
+          <th style="text-align: left">AB-03-0093-NX</th>
+          <td>400</td>
+          <td><a href="daily2.html"><i class="fa-solid fa-circle-arrow-right" style="color:green;font-size:14px"></i><a></a></td>
+        </tr>       
+        <tr style="text-align: center">
+          <th style="text-align: left">AB-03-0092-NX</th>
+          <td>500</td>
+          <td><a href="daily2.html"><i class="fa-solid fa-circle-arrow-right" style="color:green;font-size:14px"></i><a></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+ 
+
+
+
+</script>
+</body>
+<script src="conv.js" crossorigin="anonymous"></script>
+</html>
